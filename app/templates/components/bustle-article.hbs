@@ -1,11 +1,14 @@
 <div class='allContent clip-default '>
   <div class="containBox">
-
       <div class="picture">
         <img src={{bustle.image}}>
       </div>
       <div class="article">
+        {{#if bustle.isFeature}}
+        <h3 class="title">{{#link-to 'bustle' bustle.id}}<span id="feature">{{bustle.title}}</span>{{/link-to}}</h3>
+        {{else}}
         <h3 class="title">{{#link-to 'bustle' bustle.id}}{{bustle.title}}{{/link-to}}</h3>
+        {{/if}}
         <p class="caption">{{bustle.caption}}</p>
         <p class="author">By {{bustle.author}}</p>
       </div>
