@@ -1,7 +1,13 @@
-<li>
-  {{#link-to 'bustle' bustle.id}}
-  <h2>{{bustle.title}}</h2>
-  {{/link-to}}
-  <h4>{{bustle.author}}</h4>
-  <p>{{bustle.caption}}</p>
-</li>
+<div class='allContent clip-default '>
+  <div class="containBox">
+
+      <div class="picture">
+        <img src={{bustle.image}}>
+      </div>
+      <div class="article">
+        <h3 class="title">{{#link-to 'bustle' bustle.id}}{{bustle.title}}{{/link-to}}</h3>
+        <p class="caption">{{bustle.caption}}</p>
+        <p class="author">By {{bustle.author}}</p>
+      </div>
+  </div>
+</div>
