@@ -1,0 +1,17 @@
+{{#if formShow}}
+<form>
+  <label for="title">Title</label>
+  {{input value=title placeholder=bustle.title}}
+  <label for="author">Author</label>
+  {{input value=author placeholder=bustle.author}}
+  <label for="caption">Caption</label>
+  {{input value=caption placeholder=bustle.caption}}
+  <label for="image">Image URL</label>
+  {{input value=image placeholder=bustle.image}}
+  <label for="content">Content</label>
+  {{input value=content placeholder=bustle.content}}
+  <button {{action 'saveBustle'}}>Save</button>
+</form>
+{{else}}
+<button {{action 'showBustleForm'}}>Show</button>
+{{/if}}
