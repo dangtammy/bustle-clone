@@ -1,1 +1,8 @@
-{{outlet}}
+<h1>Bustle</h1>
+
+<h5>This is some articles</h5>
+<ul>
+  {{#each model as |bustle|}}
+     {{bustle-article bustle = bustle}}
+  {{/each}}
+</ul>
