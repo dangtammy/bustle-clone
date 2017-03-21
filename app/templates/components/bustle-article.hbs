@@ -1,16 +1,28 @@
-<div class='allContent clip-default '>
-  <div class="containBox">
-      <div class="picture">
-        <img src={{bustle.image}}>
-      </div>
-      <div class="article">
+
         {{#if bustle.isFeature}}
+        <div class='featureContent'>
+          <div class="featureBox">
+              <div class="featurePicture">
+                <img src={{bustle.image}} class="featurePhoto">
+              </div>
+              <div class="featureArticle">
         <h3 class="title">{{#link-to 'bustle' bustle.id}}<span id="feature">{{bustle.title}}</span>{{/link-to}}</h3>
+        <p class="author">By {{bustle.author}}</p>
+      </div>
+  </div>
+</div>
         {{else}}
+        <div class='allContent clip-default '>
+          <div class="containBox">
+              <div class="picture">
+                <img src={{bustle.image}}>
+              </div>
+              <div class="article">
         <h3 class="title">{{#link-to 'bustle' bustle.id}}{{bustle.title}}{{/link-to}}</h3>
-        {{/if}}
         <p class="caption">{{bustle.caption}}</p>
         <p class="author">By {{bustle.author}}</p>
       </div>
   </div>
 </div>
+
+        {{/if}}
